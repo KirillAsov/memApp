@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=reset.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=memApp.css>
+    <title>MemsApp</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-1 settings">
+            <h2 class="settings__title">Настройки:</h2>
+            <ul class="settings__list">
+                <li class="settings__list-item">
+                    <p class="item-text">Мем</p>
+                    <div class="input-wrapper input-wrapper__select">
+                        <select class="select" name="" id="select">
+                            <option hidden disabled selected>select picture</option>
+                            <option value="">1234</option>
+                        </select> 
+                    </div>
+                </li>
+                <li class="settings__list-item">
+                    <p class="item-text">Текст сверху</p>
+                    <div class="input-wrapper">
+                        <input id="input__text-up"
+                                class="input__text"
+                                type="text"
+                                placeholder="введите текст">
+                    </div>
+                </li>
+                <li class="settings__list-item">
+                    <p class="item-text">Текст снизу</p>
+                    <div class="input-wrapper">
+                        <input id="input__text-down"
+                                    class="input__text"
+                                    type="text"
+                                    placeholder="введите текст">
+                    </div>
+                </li>
+                <li class="settings__list-item settings__list-item__color">
+                    <p class="item-text">Выберите цвет</p>
+                    <div class="input-wrapper input-wrapper__color">
+                        <input id="input__color"
+                                    class="input__color"
+                                    type="color"
+                                    value="#ffffff">
+                    </div>
+                </li>
+            </ul>
+            <button id="create-btn" class="create-btn">добавить надпись</button>
+            
+        </div>
+        <div class="col-1 preview">
+            <h2 class="preview__title">Превью:</h2>
+            <div id="mem-wrapper" class="mem-wrapper">
+                <img id="mem__picture" class="mem__picture" src="image 1.png" alt="mem">
+                <div id="mem__text" class="mem__text">
+                    <p id="mem__text-up" class="mem__text-up">Нельзя просто так</p>
+                    <p id="mem__text-down" class="mem__text-up">Нельзя просто так</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="veiw-mems.js"></script>
+    <script src="model-mems.js"></script>
+    <script src="api.js"></script>
+    <script src="controller-mems.js"></script>
+    <script src="mems.js"></script>
+</body>
+</html>
